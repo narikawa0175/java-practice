@@ -69,9 +69,17 @@ console.log(i)←「i」はfor句内の()ブロック内で宣言されたもの
 var str = "webcamp"
 
 function foo() {
-  console.log(str)
-  var str = "dmm webcamp"
+  console.log(str)　　　　　
+  var str = "dmm webcamp" //変数の巻き上げとは関数内のどの部分で宣言しても関数冒頭で宣言したことになる
   console.log(str)
 }
 
 foo()
+
+/*
+変数宣言の使い分け
+スコープが広いと意図しないエラーが出たりするためvarはほとんど使われない
+なのでletとconstの使い分け
+letは再代入が可能でconstは再代入が不可能ということ
+その為基本的には新たに値を代入する必要のないものにはconst、再代入する場合はletという感じ
+*/
